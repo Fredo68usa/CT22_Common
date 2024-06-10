@@ -1,0 +1,32 @@
+# -----
+source : sqlitect22.py
+main : mainsqlitect22.py
+
+# ----------------
+ MetaData management
+# ----------------
+
+- Number of STAPS handled is limited to 1000
+- Number of COLLS handled is limited to 100
+- Number of DBUSERS handled is limited to 500
+- Number of NODES handled is limited to 1500
+
+
+# -------------------------------------
+    Mandatory fields in MetaData files
+# -------------------------------------
+"HostnameColl" : "Colls",
+"IPColl" : "collIP",
+"HostnameStap" : "Hostname",
+"IPStap" : "IP",
+"DBUser" : "DB User Name",
+
+
+# ------------------- 
+   Dynamic mandatory columns management :
+# ------------------- 
+The tables MUST have a few mandatory columns
+In order, not to force customers to provide data in csv format with mandatory names on those columns,
+it has been parameterized in the param_data.json.
+In the program the name of csv file columns are NOT hardcoded but read in the param_data.json file.
+
